@@ -6,7 +6,8 @@ import useMenu from './useMenu'
 function MenuItems({categorySelected}) {
     const {categories, isLoading}= useMenu()
     const categoriesFiltered = categories && categories.filter((category)=> category.name === categorySelected )
-    
+    if(isLoading) <p>sfsdf</p>
+
     return (
     <div className='px-10'>
         <div className='flex flex-wrap'>

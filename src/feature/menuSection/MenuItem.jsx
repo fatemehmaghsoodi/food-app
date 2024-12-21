@@ -35,7 +35,7 @@ function Item({product}){
     },[countOfOrder])
     
     return(
-      <div className='basis-1/4 max-md:basis-1/2 max-sm:basis-full p-5 max-h-full min-h-[300px]' >
+      <div className='basis-1/4 max-md:basis-1/2 max-sm:basis-full p-5 max-h-full min-h-[300px]' data-aos="zoom-in">
         <div className='relative border-4 rounded-2xl hover:border-secondary-200 overflow-hidden backdrop-blur-3xl'>
             <img src={product.img} alt={product.name} />
             <button 
