@@ -23,7 +23,7 @@ function OrderItem({item}){
       <div className='flex w-full justify-between' >
           <div className='flex flex-col gap-y-1 justify-center'>
               <p className='text-sm text-nowrap'>{item.name}</p>
-              <span>{item.count} &#9747; $ {item.price}</span>
+              <span>{item.count} &#9747; <span className="text-secondary-200"> $ {item.price}</span></span>
           </div>
       </div>
       </li>  

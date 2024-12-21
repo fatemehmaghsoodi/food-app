@@ -15,7 +15,7 @@ return (
         <ul>
            {children}
         </ul>
-        <hr />
+        <hr/>
         <TotalPrice/>
     </div>
   )

@@ -7,8 +7,8 @@ function TotalPrice() {
         return prev +(Number(current.price) * current.count)
       }, 0);
   return (
-    <div className='flex justify-between mt-2'>
-      <span className='font-medium'>total:</span>
+    <div className='flex justify-between mt-2 text-xl'>
+      <span className='font-medium '>total price:</span>
       <span className='text-secondary-200'>$ {totalPrice}</span>
     </div>
   )

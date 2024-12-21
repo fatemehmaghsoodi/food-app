@@ -17,6 +17,7 @@ export default MenuItem
 
 function Item({product}){
     const [countOfOrder, setCountOfOrder]= useState(0)
+    const [previousValue, setPreviousValue] = useState(null);
     const {favorite} = useSelector(state=> state.favorite)
     const dispatch= useDispatch()
     const selectedItem = favorite.some(item=> item.name === product.name)
@@ -28,8 +29,14 @@ function Item({product}){
         }
     }
     useEffect(()=>{
+
+        if(previousValue < countOfOrder && countOfOrder !=0 ){
+            toast.success(`'${product.name}' added to cart`)
+        }else if(previousValue > countOfOrder && countOfOrder !=0 ) {
+            toast.error(`'${product.name}' removed from cart`);
+        }
         if(countOfOrder > 0){
-            // toast.success(`'${product.name}' added to cart`)
+           
             dispatch(addOrder({...product , count:countOfOrder }))
         }
     },[countOfOrder])
@@ -57,12 +64,18 @@ function Item({product}){
             </button>
             :<div className='flex gap-x-2 items-center justify-center'>
                 <button className='max-w-fit' 
-                    onClick={()=> setCountOfOrder((pre) => pre+1)}>
+                    onClick={()=> setCountOfOrder((pre) =>{
+                        setPreviousValue(pre);
+                        return pre + 1;
+                    })}>
                     <SlPlus className="text-xl"/>
                 </button>
                 <span className="text-xl">{countOfOrder}</span>
                 <button 
-                onClick={()=> setCountOfOrder((pre)=>pre-1)}>
+                onClick={()=> setCountOfOrder((pre)=>{
+                    setPreviousValue(pre);
+                    return pre - 1;
+                })}>
                     <SlMinus className="text-xl"/>
                 </button>
             </div>
