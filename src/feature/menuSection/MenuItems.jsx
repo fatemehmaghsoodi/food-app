@@ -6,7 +6,7 @@ import useMenu from './useMenu'
 function MenuItems({categorySelected}) {
     const {categories, isLoading}= useMenu()
     const categoriesFiltered = categories && categories.filter((category)=> category.name === categorySelected )
-    if(isLoading) <p>sfsdf</p>
+    if(isLoading) <p>please wait ...</p>
 
     return (
     <div className='px-10'>

@@ -61,7 +61,7 @@ export default Footer;
 function FooterLists(){
   return(
     <div className="w-full max-md:w-full max-md:mt-8 text-white flex justify-around items-start ">
-    {footerList.map((lists, index) => <LinksList items={lists.items}/>)}
+    {footerList.map((lists, index) => <LinksList key={index} items={lists.items}/>)}
     <ul data-aos="fade-up" className="space-y-4 hover:[&>*]:text-secondary-200">
       <li className="font-bold">Contact Us</li>
       <li className="flex items-center gap-x-2">
@@ -86,7 +86,7 @@ function LinksList({items}){
   
   return(
     <ul data-aos="fade-up" className="space-y-3 hover:[&>*]:text-secondary-200">
-      {items.map(item => <li className="first:font-bold">{item}</li>)}
+      {items.map((item, index) => <li key={index} className="first:font-bold">{item}</li>)}
     </ul>
   )
 }
