@@ -18,7 +18,7 @@ function WelComeSection() {
           <p className='text-dark-200 lg:text-2xl mt-2 '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam perspiciatis voluptatem explicabo, exercitationem asperiores vero officia eveniet assumenda repellat consectetur</p>
       </WelcomeRows>
       <WelcomeRows imageDir="slide-left" descriptionDir="slide-right" image={stick}>
-          <h2 className='lg:text-5xl max-lg:-mt-40'>Steak With Stick</h2>  
+          <h2 className='lg:text-5xl sm:-mt-[280px] md:-mt-[190px] lg:-mt-[120px] xl:mt-0 max-sm:mt-0'>Steak With Stick</h2>  
           <p className='text-dark-200 lg:text-2xl mt-2 '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam perspiciatis voluptatem explicabo, exercitationem asperiores vero officia eveniet assumenda repellat consectetur</p>
       </WelcomeRows>
     </div>

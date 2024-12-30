@@ -6,6 +6,7 @@ import {MdOutlineClose } from 'react-icons/md'
 import FavoriteList from './FavoriteList'
 import { useSelector } from 'react-redux'
 import OrdersList from './OrdersList'
+import Badge from './Badge'
 function Menu() {
  const [isOpen, setIsOpen] = useState(false)
  const [stickyClass, setStickyClass] = useState('absolute');
@@ -79,14 +80,14 @@ function IconsList({handleMenu, isOpen, setIsFavoriteOpen, isFavoriteOpen}) {
           <li>
           <button onClick={setIsFavoriteOpen} className='relative hover:text-secondary-200 font-semibold h-12'>
             <SlHeart size={20} className=''/>
-            <span className='badge'>{favorite.length}</span>
+            <Badge count={favorite.length}/>
           </button>
         </li>
         {isFavoriteOpen && <FavoriteList closeFavorite={()=>setIsFavoriteOpen(false)}/> }
         <li>
           <button onClick={()=>setIsCartOpen(pre=>!pre)} className='relative hover:text-secondary-200 font-semibold h-12'>
             <SlBasket size={20}/>
-            <span className='badge'>{order.length}</span>
+            <Badge count={order.length}/>
           </button>
         </li>
         {isCartOpen && <OrdersList closeOrder={()=>setIsCartOpen(is=>!is)}/>}

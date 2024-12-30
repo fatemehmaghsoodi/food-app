@@ -21,7 +21,7 @@
 
 @layer components{
   .badge{
-    @apply text-[9px] text-white m-auto absolute top-0 bg-secondary-200 rounded-full w-4 font-thin
+    @apply text-[9px] text-white m-auto absolute top-0 rounded-full w-4 font-thin
   }
 }
 

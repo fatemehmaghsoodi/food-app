@@ -7,7 +7,7 @@ import SubMenuLayout from './SubMenuLayout';
 function FavoriteList({closeFavorite}) {
    const {favorite} = useSelector((state)=>state.favorite) 
   return (
-    <SubMenuLayout closeItem={closeFavorite}>
+    <SubMenuLayout closeItem={closeFavorite} nameList="favorites">
         {favorite.length? favorite.map((item, index)=> <FavoriteItem item={item} key={index}/>)
         :<p>no items in favorite list</p>
         }

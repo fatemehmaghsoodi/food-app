@@ -5,7 +5,7 @@ function OrdersList({closeOrder}) {
    const {order}= useSelector(state=>state.order)
    
   return (
-    <SubMenuLayout closeItem={closeOrder}>
+    <SubMenuLayout closeItem={closeOrder} nameList="orders">
        {order.length 
         ? order.map((item, index)=> <OrderItem item={item} key={index}/>)
         :<p>no items in order list</p>
