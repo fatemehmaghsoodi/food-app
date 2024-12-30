@@ -41,7 +41,7 @@ function MenuSection() {
   
   return (
     <section>
-      <div className='container mt-10 mx-auto h-full' >
+      <div className='container mt-10 mx-auto h-full max-sm:mt-3' >
         <div className='flex justify-center'>
             <div className='w-36'>
               <h1 className='border-b-4 border-secondary-200'>menu</h1>
